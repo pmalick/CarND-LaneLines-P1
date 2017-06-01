@@ -15,7 +15,8 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image1]: ./test_images_output/solidWhiteCurve.jpg "solidWhiteCurve"
+[image2]: ./test_images_output/solidYellowCurve2.jpg "solidYellowCurve2"
 
 ---
 
@@ -40,14 +41,19 @@ First we need to know if a point is part of the right or the left lane line. For
 Once we defined if the points are part of the right or left line, we use the nb.polyfit function to find a polynomial of degree 1 (y = mx + b) fitting to the right line points and to the left line points. This give us two m and two b coefficients
 
 Finally to draw the extrapolated left and right line I use the following x and y coordinates:
-start point : 	y = img_height; x = (y - b)/m
-end point :   	y = img_height*0.6  (it corresponds to the top of the region of interest); x = (y - b)/m
 
-Found hereafter some images to show how the new draw_lines function in action:
+start point : y = img_height; x = (y - b)/m
+
+end point : y = img_height*0.6  (it corresponds to the top of the region of interest); x = (y - b)/m
+
+Found hereafter some images showing the new draw_lines function in action:
 
 
 
 ![alt text][image1]
+![alt text][image2]
+
+
 
 
 ### 2. Identify potential shortcomings with your current pipeline
